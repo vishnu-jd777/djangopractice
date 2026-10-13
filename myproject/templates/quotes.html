@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BMW Quotes | Rich Mindset</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: #ffffff;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+            background:
+                radial-gradient(circle at center, #18202d 0%, #080808 55%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .bmw {
+            font-size: 18px;
+            letter-spacing: 8px;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: clamp(60px, 10vw, 120px);
+            letter-spacing: 12px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #3d8cff;
+        }
+
+        .tagline {
+            color: #aaa;
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+
+        /* QUOTES */
+
+        .quotes-section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 100px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+        }
+
+        .quote {
+            background: #101010;
+            border-left: 4px solid #3d8cff;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .quote p {
+            font-size: 25px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .quote span {
+            display: block;
+            margin-top: 18px;
+            color: #777;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        /* MINDSET */
+
+        .mindset {
+            background: #0c0c0c;
+            padding: 100px 25px;
+            text-align: center;
+        }
+
+        .mindset h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        .mindset p {
+            max-width: 700px;
+            margin: auto;
+            color: #999;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* CARDS */
+
+        .cards {
+            max-width: 1000px;
+            margin: auto;
+            padding: 90px 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #111;
+            padding: 35px 25px;
+            text-align: center;
+            border: 1px solid #222;
+        }
+
+        .card h3 {
+            color: #3d8cff;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px;
+            text-align: center;
+            background: #020202;
+            color: #555;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 700px) {
+
+            h1 {
+                letter-spacing: 6px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .quote p {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    {% include 'menu.html' %}
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="bmw">
+                BAYERISCHE MOTOREN WERKE
+            </div>
+
+            <h1>
+                <span>BMW</span> QUOTES
+            </h1>
+
+            <p class="tagline">
+                THINK BIG. WORK SILENTLY. DRIVE DIFFERENT.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUOTES -->
+
+    <section class="quotes-section">
+
+        <h2 class="section-title">
+            The Rich Mindset
+        </h2>
+
+        <div class="quote">
+            <p>
+                "Don't chase the lifestyle.
+                Build the life that creates it."
+            </p>
+
+            <span>— MINDSET</span>
+        </div>
+
+
+        <div class="quote">
+            <p>
+                "Luxury is not about showing people
+                what you have. It's about knowing
+                what you built."
+            </p>
+
+            <span>— DISCIPLINE</span>
+        </div>
+
+
+        <div class="quote">
+            <p>
+                "While they are watching your results,
+                you are building your next level."
+            </p>
+
+            <span>— FOCUS</span>
+        </div>
+
+
+        <div class="quote">
+            <p>
+                "Dream expensive.
+                Work harder."
+            </p>
+
+            <span>— AMBITION</span>
+        </div>
+
+    </section>
+
+
+    <!-- MINDSET -->
+
+    <section class="mindset">
+
+        <h2>
+            SUCCESS IS A MINDSET
+        </h2>
+
+        <p>
+            The car is the result.
+            The discipline is the engine.
+            The mindset is the driver.
+            Build yourself first, and everything else follows.
+        </p>
+
+    </section>
+
+
+    <!-- THREE PILLARS -->
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>DISCIPLINE</h3>
+
+            <p>
+                Do what needs to be done,
+                especially when nobody is watching.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>AMBITION</h3>
+
+            <p>
+                Don't limit your goals
+                to what other people think is possible.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>EXECUTION</h3>
+
+            <p>
+                Ideas create possibilities.
+                Execution creates results.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        BMW QUOTES • RICH MINDSET • DJANGO PRACTICE
+
+    </footer>
+
+</body>
+</html>

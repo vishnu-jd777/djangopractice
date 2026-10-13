@@ -1,0 +1,13 @@
+<h1>En Nenjil Kudi Irukkum</h1>
+
+<h2>movies are</h2>
+<ul>
+    {% for movie in movies %}
+        <li><h3>{{ movie.title | upper }}</h3></li>
+        <li><h3>{{ movie.para | upper }}</h3></li>
+        <li><h3>{{ movie.price | upper }}</h3></li>
+    {% endfor %}
+</ul>
+
+{% include 'menu.html' %}
+

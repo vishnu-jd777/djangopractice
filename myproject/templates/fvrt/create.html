@@ -1,0 +1,23 @@
+{% extends 'fvrt/base.html' %}
+
+{% block title %}<h1>give you fvrt pair</h1>{% endblock %}
+
+{% block content %}
+
+<h1>GIVE YOUR FVRT PAIR</h1>
+
+<div class="form-card">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="button">Save Movie</button>
+
+        <a href="{% url 'fvrtpair' %}" class="button">
+            Cancel
+        </a>
+    </form>
+</div>
+
+{% endblock %}

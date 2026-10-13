@@ -1,0 +1,60 @@
+{% extends 'fvrt/base.html' %}
+
+{% block title %}Movie List{% endblock %}
+
+{% block content %}
+
+<h1>Welcome to Movie Manager</h1>
+<p>Manage your favourite movies, actors and actresses.</p>
+
+<a href="{% url 'fvrtcreate' %}" class="button">
+    + Add New Movie
+</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Favourite Actor</th>
+            <th>Favourite Actress</th>
+            <th>Movie Name</th>
+            <th>PIC</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        {% for movie in fvrtobj %}
+        <tr>
+            <td>{{ movie.id }}</td>
+            <td>{{ movie.name }}</td>
+            <td>{{ movie.fvrtactor }}</td>
+            <td>{{ movie.fvrtactress }}</td>
+            <td>{{ movie.movie }}</td>
+            <td>{% if movie.media %}
+                <img src="{{ movie.media.url }}" alt="Uploaded media" width="100">
+                {% else %}
+                <p>no media uploaded</p>
+                {% endif %}
+            </td>
+
+            <td>
+                <a href="{% url 'fvrtedit' movie.pk %}"
+                   class="button">Edit</a>
+
+                <a href="{% url 'fvrtdelete' movie.pk %}"
+                   class="button delete-button">Delete</a>
+            </td>
+        </tr>
+
+        {% empty %}
+        <tr>
+            <td colspan="6">No movies have been added yet.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

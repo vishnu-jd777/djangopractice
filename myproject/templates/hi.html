@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raavana Mavanda - Lyrics</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: #f5f5f5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 750px;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            color: #e50914;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #999;
+            font-size: 18px;
+        }
+
+        .lyrics {
+            background: #151515;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .lyrics p {
+            font-size: 20px;
+            line-height: 2;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .lyrics .chorus {
+            color: #ff3340;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 35px 0;
+        }
+
+        .divider {
+            height: 1px;
+            background: #333;
+            margin: 35px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            .lyrics {
+                padding: 25px;
+            }
+
+            .lyrics p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    {% include 'menu.html' %}
+
+    <div class="container">
+
+        <header>
+            <h1>Raavana Mavanda</h1>
+            <p>Lyrics</p>
+        </header>
+
+        <div class="lyrics">
+
+            <!-- Paste the lyrics you have here -->
+
+            <p>
+                RAAVANA MAVANDA
+            </p>
+
+            <p>
+                OTHAIYIL NIKKIRA YEMANDA
+            </p>
+
+            <p>
+                ATHANA BIMBAMUM AVANDA
+            </p>
+
+            <p>
+                ULAGAANDAVAN DA
+            </p>
+
+            <div class="divider"></div>
+
+
+        </div>
+        <form action="/thalapathy/" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <footer>
+            <p>Django Template Practice</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
